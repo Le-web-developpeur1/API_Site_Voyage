@@ -1,5 +1,12 @@
 const mysql = require("mysql2");
 require("dotenv").config();
+console.log("🔍 Vérification des variables MySQL : ", process.env); 
+
+console.log("🔍 DB_HOST:", process.env.DB_HOST);
+console.log("🔍 DB_USER:", process.env.DB_USER);
+console.log("🔍 DB_PASS:", process.env.DB_PASS ? "Mot de passe présent" : "❌ Mot de passe vide !");
+console.log("🔍 DB_NAME:", process.env.DB_NAME);
+console.log("🔍 DB_PORT:", process.env.DB_PORT || 3306);
 
 const db = mysql.createConnection({
     host: process.env.DB_HOST,
